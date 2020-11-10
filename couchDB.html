@@ -18,7 +18,7 @@
         </ul>
         <div id=”t1”>
             <p id=”mensajeFinal”></p>
-            <button id="generar" type=”submit”>Obtener información de CouchDB</button>
+            <button id="generar" type=”submit”>Obtener la información de CouchDB</button>
         </div>
     </div>
 </body>
@@ -29,7 +29,7 @@
         let button = document.querySelector("#generar").click(function() {
             $.ajax({
                 dataType: 'json',
-                url: "http: //127.0.0.1:5984/_utils/#/database/ejemplo_1/_design/view1/_view/new-view"
+                url: "http://127.0.0.1:5984/ejemplo_1/_design/view1/_view/new-view"
             }).done(function(data) {
                 for (var i = 0; i < data.rows.length; i++) {
                     var c = data.rows[i].value.ciudad;
